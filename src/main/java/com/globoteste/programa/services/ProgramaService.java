@@ -48,4 +48,10 @@ public class ProgramaService {
 		repository.save(programa);
 	}
 
+	public List<String> getAllId() {
+		List<String> ids = new ArrayList<String>();
+		repository.findAll().forEach(programa1 -> ids.add(programa1.getId()));
+		return ids;
+	}
+
 }

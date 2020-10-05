@@ -32,6 +32,12 @@ public class ProgramaResources {
 		return programaService.getAllProgramas();
 	}
 
+	@GetMapping("/allId")
+	private List<String> getAllId() {
+		return programaService.getAllId();
+	}
+
+	
 	@GetMapping("/view/{id}")
 	private Programa getPrograma(@PathVariable("id") String id) {
 		return programaService.getProgramaById(id);
